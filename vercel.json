@@ -8,7 +8,7 @@
     },
     {
       "src": "public/index.php",
-      "use": "@vercel/php"
+      "use": "vercel-php-laravel@0.6.2"
     }
   ],
   "routes": [
@@ -28,7 +28,7 @@
   "env": {
     "APP_ENV": "local",
     "APP_DEBUG": "true",
-    "APP_URL": "",
+    "APP_URL": "https://your-vercel-app.vercel.app",
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_EVENTS_CACHE": "/tmp/events.php",
     "APP_PACKAGES_CACHE": "/tmp/packages.php",
