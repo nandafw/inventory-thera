@@ -1,54 +1,26 @@
 {
-    "version": 2,
-      "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.7.4" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/index.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/dist/(.*)",
+      "dest": "/public/dist/$1"
     },
-    "routes": [
-        {
-            "src": "/dist/(.*)",
-            "dest": "/public/dist/"
-        },
-        {
-            "src": "/storage/(.*)",
-            "dest": "/public/storage/"
-        },
-        {
-            "src": "/contoh/(.*)",
-            "dest": "/public/dist/contoh/"
-        },
-        {
-            "src": "/css/(.*)",
-            "dest": "/public/dist/css/"
-        },
-        {
-            "src": "/img/(.*)",
-            "dest": "/public/dist/img/"
-        },
-        {
-            "src": "/js/(.*)",
-            "dest": "/public/dist/js/"
-        },
-        {
-            "src": "/libs/(.*)",
-            "dest": "/public/dist/libs/"
-        },
-        {
-            "src": "/static/(.*)",
-            "dest": "/public/dist/static/"
-        },
-        {
-            "src": "/gambar/(.*)",
-            "dest": "/public/storage/gambar"
-        },
-        {
-            "src": "/tmp/(.*)",
-            "dest": "/public/storage/tmp"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
+    {
+      "src": "/storage/(.*)",
+      "dest": "/public/storage/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
+  ]
+}
     ],
     "env": {
         "APP_ENV": "local",
