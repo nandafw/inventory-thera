@@ -7,12 +7,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- logo bulat -->
-        <h1 class="navbar-brand navbar-brand-autodark">
+        <!-- logo bulat + tulisan -->
+        <h1 class="navbar-brand navbar-brand-autodark text-center">
             <a href="{{ route('dashboard') }}">
                 <span class="avatar avatar-md logo-avatar">
                     <img src="{{ asset('dist/static/logotheraart.png') }}" alt="Thera Art Logo">
                 </span>
+                <div class="logo-text mt-2">Thera Art Space</div>
             </a>
         </h1>
 
@@ -51,9 +52,7 @@
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
                             <i class="ti ti-home icon"></i>
                         </span>
-                        <span class="nav-link-title">
-                            Home
-                        </span>
+                        <span class="nav-link-title">Home</span>
                     </a>
                 </li>
 
@@ -135,9 +134,32 @@
     </div>
 
     <!-- ============================== -->
-    <!-- CSS PINK SIDEBAR -->
+    <!-- CSS SIDEBAR -->
     <!-- ============================== -->
-       <style>
+    <style>
+        /* Logo Bulat */
+        .logo-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50% !important;
+            overflow: hidden;
+        }
+        .logo-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50% !important;
+            display: block;
+        }
+
+        /* Tulisan di bawah logo */
+        .logo-text {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
         /* Light mode pink */
         aside.navbar {
             background-color: #f74f9d !important;
@@ -172,32 +194,9 @@
             background-color: #f06292 !important;
         }
 
-        /* Logo Bulat */
-        .logo-avatar {
-            width: 65px;
-            height: 65px;
-            border-radius: 50% !important;
-            overflow: hidden;
-        }
-        .logo-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50% !important;
-            display: block;
-        }
-
-        /* ============================== */
-        /* DARK MODE */
-        /* ============================== */
+        /* Dark mode */
         [data-bs-theme="dark"] aside.navbar {
             background-color: #182433 !important;
-        }
-        [data-bs-theme="dark"] aside.navbar .nav-link,
-        [data-bs-theme="dark"] aside.navbar .nav-link:hover,
-        [data-bs-theme="dark"] aside.navbar .nav-link.active,
-        [data-bs-theme="dark"] aside.navbar .nav-link:focus {
-            color: #fff !important;
         }
         [data-bs-theme="dark"] aside.navbar .nav-link.active {
             background-color: #333 !important;
@@ -205,15 +204,8 @@
         [data-bs-theme="dark"] aside.navbar .nav-link:hover {
             background-color: #f74f9d !important;
         }
-        [data-bs-theme="dark"] aside.navbar .nav-link-icon i,
-        [data-bs-theme="dark"] aside.navbar .nav-link-icon svg {
-            color: #fff !important;
-        }
         [data-bs-theme="dark"] aside.navbar .dropdown-menu {
             background-color: #000 !important;
-        }
-        [data-bs-theme="dark"] aside.navbar .dropdown-item {
-            color: #fff !important;
         }
         [data-bs-theme="dark"] aside.navbar .dropdown-item:hover {
             background-color: #505050ff !important;
