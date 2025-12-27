@@ -22,8 +22,5 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
         // Paginator::useBootstrapFive();
-        if ($this->app->environment('production')) {
-            \URL::forceScheme('https');
-        }
     }
 }
